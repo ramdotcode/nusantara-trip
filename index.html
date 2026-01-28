@@ -33,52 +33,90 @@
             },
         }
     </script>
-<style>
+    <style>
         body {
             font-family: "Plus Jakarta Sans", sans-serif;
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-            height: 100vh;
+        }
+        @media (min-width: 768px) {
+            body {
+                scroll-snap-type: y mandatory;
+                overflow-y: scroll;
+                height: 100vh;
+            }
+            section {
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+                height: 100vh;
+                width: 100%;
+                overflow: hidden;
+            }
         }
         section {
-            scroll-snap-align: start;
-            scroll-snap-stop: always;
-            height: 100vh;
             width: 100%;
-            overflow: hidden;
+            position: relative;
         }
         .no-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
         }
     </style>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-background-light dark:bg-background-dark text-white font-display">
 <!-- Header / Navigation -->
-<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
-<div class="flex items-center gap-3">
-<div class="h-10 w-auto">
-<img src="assets/images/logo.png" alt="Nusantara Trip Logo" class="h-full w-auto object-contain">
-</div>
-<h2 class="text-white text-xl font-bold tracking-[-0.015em] uppercase">Nusantara Trip</h2>
-</div>
-<div class="flex items-center gap-12">
-<nav class="hidden md:flex items-center gap-10">
-<a class="text-white text-xs font-bold uppercase tracking-widest transition-colors border-b-2 border-primary pb-1" href="index.html">Beranda</a>
-<a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="paket.html">Destinasi</a>
-<a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="about.html">Tentang Kami</a>
-</nav>
-<button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all">
-                Pesan Sekarang
-            </button>
-</div>
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-10 py-4 md:py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
+    <div class="flex items-center gap-2 md:gap-3">
+        <div class="h-8 md:h-10 w-auto">
+            <img src="assets/images/logo.png" alt="Nusantara Trip Logo" class="h-full w-auto object-contain">
+        </div>
+        <h2 class="text-white text-lg md:text-xl font-bold tracking-[-0.015em] uppercase">Nusantara Trip</h2>
+    </div>
+    
+    <div class="flex items-center gap-4 md:gap-12">
+        <nav class="hidden lg:flex items-center gap-10">
+            <a class="text-white text-xs font-bold uppercase tracking-widest transition-colors border-b-2 border-primary pb-1" href="index.html">Beranda</a>
+            <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="paket.html">Destinasi</a>
+            <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="about.html">Tentang Kami</a>
+        </nav>
+        <button class="hidden sm:block bg-primary hover:bg-primary/90 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest px-6 md:px-8 py-3 rounded-full transition-all">
+            Pesan Sekarang
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-toggle" class="lg:hidden text-white">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
 </header>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-background-dark lg:hidden flex flex-col items-center justify-center gap-8">
+    <button id="menu-close" class="absolute top-6 right-6 text-white">
+        <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <a class="text-white text-2xl font-bold uppercase tracking-widest" href="index.html">Beranda</a>
+    <a class="text-white/80 hover:text-white text-2xl font-bold uppercase tracking-widest" href="paket.html">Destinasi</a>
+    <a class="text-white/80 hover:text-white text-2xl font-bold uppercase tracking-widest" href="about.html">Tentang Kami</a>
+    <button class="mt-4 bg-primary text-white text-sm font-bold uppercase tracking-widest px-10 py-4 rounded-full">
+        Pesan Sekarang
+    </button>
+</div>
 <!-- Section 1: Hero -->
-<section class="relative flex items-center justify-center" id="hero">
+<section class="relative flex items-center justify-center pt-32 pb-20 md:pt-0 md:pb-0 min-h-screen md:h-screen" id="hero">
 <div class="absolute inset-0 bg-cover bg-center" data-alt="Stunning mountain landscape at sunrise" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMq58wvXK_hUko8vuxmCSPOxFyVpLV-m_57eimbwIy27Ney21aniJ0_ZdPk_7Tfp4n6IJNUCOu9LwGx0x7pooUkRZcwZ0menBXf52-T6U5ha6R1KN22rsmPf9oxcl8H_etVFr-T339slMuH37UGxRyWeUpA6ewbghEh0iT3D9-t0huqDNLv1MO9-MIgq-SBR_bQ9UxdXXY25gIyUCV7-u-Vmf4fK4Cw9ewXyBUM9rLHOG2HGB_IrkTLDA9IvdK-q4c6asHjJ74");'></div>
 <div class="relative z-10 text-center max-w-4xl px-6">
-<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tighter mb-8 opacity-90 uppercase animate-fade-up">
+<h1 class="text-white text-4xl md:text-7xl font-black leading-tight tracking-tighter mb-6 md:mb-8 opacity-90 uppercase animate-fade-up">
                 Jelajahi Indonesia Tanpa Ribet 
             </h1>
 <p class="text-sand text-lg md:text-xl font-light leading-relaxed mb-10 max-w-3xl mx-auto animate-fade-up delay-1">
@@ -95,15 +133,15 @@
 </div>
 </section>
 <!-- Section 2: Narrative / Story -->
-<section class="relative flex items-center justify-center bg-background-light dark:bg-background-dark" id="philosophy">
-<div class="max-w-4xl px-10 text-center">
+<section class="relative py-20 md:py-0 md:flex md:items-center md:justify-center bg-background-light dark:bg-background-dark" id="philosophy">
+<div class="max-w-4xl px-6 md:px-10 text-center mx-auto">
 <span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-6 block">Filosofi Kami</span>
-<h2 class="text-white text-4xl md:text-6xl font-bold leading-tight mb-8 reveal">Seni Menjelajah</h2>
+<h2 class="text-white text-3xl md:text-6xl font-bold leading-tight mb-8 reveal">Seni Menjelajah</h2>
 <div class="w-20 h-1 bg-primary mx-auto mb-10 reveal delay-1"></div>
-<p class="text-white/70 text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto italic reveal delay-2">
+<p class="text-white/70 text-lg md:text-2xl font-light leading-relaxed max-w-3xl mx-auto italic reveal delay-2">
                 "Kami percaya perjalanan adalah sebuah narasi, rangkaian momen yang terjalin membentuk cerita seumur hidup. Misi kami adalah memandu Anda melewati bab-bab yang belum tertulis."
             </p>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 reveal delay-3">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mt-16 md:mt-20 reveal delay-3">
 <div class="flex flex-col items-center gap-3">
 <span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
 <h3 class="font-bold text-lg uppercase tracking-wider">Terkurasi</h3>
@@ -123,11 +161,11 @@
 </div>
 </section>
 <!-- Section 3: Packages (Horizontal Slider) -->
-<section class="flex flex-col justify-center bg-zinc-900 reveal" id="destinations">
-<div class="px-20 mb-10 flex justify-between items-end reveal">
+<section class="flex flex-col justify-center bg-zinc-900 py-20 md:py-0 reveal" id="destinations">
+<div class="px-6 md:px-20 mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-0 reveal">
 <div>
 <span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block">Destinasi Pilihan</span>
-<h2 class="text-white text-5xl font-bold">Liburan Terkurasi</h2>
+<h2 class="text-white text-4xl md:text-5xl font-bold leading-tight">Liburan Terkurasi</h2>
 </div>
 <div class="flex gap-4">
 <a href="paket.html" class="flex items-center gap-2 text-primary font-bold uppercase text-[10px] tracking-widest hover:underline">
@@ -135,9 +173,9 @@
 </a>
 </div>
 </div>
-<div class="flex gap-8 overflow-x-auto px-20 pb-10 no-scrollbar snap-x reveal delay-1">
+<div class="flex gap-6 md:gap-8 overflow-x-auto px-6 md:px-20 pb-10 no-scrollbar snap-x reveal delay-1">
 <!-- Card 1 -->
-<div class="min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
+<div class="min-w-[300px] md:min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%), url("https://images.unsplash.com/photo-1549643276-fdf2fab574f5?auto=format&fit=crop&q=80");'></div>
 <div class="absolute bottom-0 left-0 p-10 w-full">
 <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">1 Hari</span>
@@ -150,7 +188,7 @@
 </div>
 </div>
 <!-- Card 2 -->
-<div class="min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
+<div class="min-w-[300px] md:min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%), url("https://images.unsplash.com/photo-1580890310980-27d53ec0db23?auto=format&fit=crop&q=80");'></div>
 <div class="absolute bottom-0 left-0 p-10 w-full">
 <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">1 Hari</span>
@@ -163,7 +201,7 @@
 </div>
 </div>
 <!-- Card 3 -->
-<div class="min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
+<div class="min-w-[300px] md:min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%), url("https://images.unsplash.com/photo-1571401835393-8c5f35328320?auto=format&fit=crop&q=80");'></div>
 <div class="absolute bottom-0 left-0 p-10 w-full">
 <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">3H 2M</span>
@@ -178,17 +216,20 @@
 </div>
 </section>
 <!-- Section 4: Interactive Itinerary (Map) -->
-<section class="relative flex flex-col justify-center bg-background-dark overflow-hidden" id="itinerary">
+<section class="relative flex flex-col justify-center bg-background-dark overflow-hidden py-20 md:py-0" id="itinerary">
 <div class="absolute inset-0 opacity-10 pointer-events-none" style='background-image: url("https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?auto=format&fit=crop&q=80"); background-size: cover;'></div>
-<div class="relative z-10 px-20 reveal">
-<span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block">Contoh Perjalanan</span>
-<h2 class="text-white text-5xl font-bold mb-16">Alur Pengalaman</h2>
-<div class="relative w-full h-64 flex items-center">
-<!-- SVG Route Path -->
-<svg class="absolute w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 1000 200">
+<div class="relative z-10 px-6 md:px-20 reveal mx-auto w-full max-w-7xl">
+<span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block text-center md:text-left">Contoh Perjalanan</span>
+<h2 class="text-white text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-center md:text-left">Alur Pengalaman</h2>
+<div class="relative w-full h-[500px] md:h-64 flex flex-col md:flex-row items-center justify-between">
+<!-- SVG Route Path - Hidden on mobile, shown on desktop -->
+<svg class="absolute w-full h-full hidden md:block" fill="none" preserveaspectratio="none" viewbox="0 0 1000 200">
 <path d="M0,100 C150,100 250,50 400,100 C550,150 750,50 1000,100" stroke="#ee5b2b" stroke-dasharray="8 8" stroke-width="2"></path>
 </svg>
-<div class="relative w-full flex justify-between items-center">
+<!-- Vertical path for mobile -->
+<div class="absolute left-1/2 -translate-x-1/2 w-px h-full border-l-2 border-dashed border-primary md:hidden"></div>
+
+<div class="relative w-full h-full flex flex-col md:flex-row justify-between items-center">
 <!-- Stop 1 -->
 <div class="group relative flex flex-col items-center">
 <div class="size-6 bg-primary rounded-full ring-8 ring-primary/20 cursor-pointer transition-transform group-hover:scale-150"></div>
@@ -225,19 +266,17 @@
 </div>
 <span class="mt-4 text-white/60 text-xs font-bold uppercase">Selesai</span>
 </div>
-</div>
-</div>
-<p class="mt-20 text-white/40 text-sm max-w-md">
+<p class="mt-12 md:mt-20 text-white/40 text-xs md:text-sm max-w-sm md:max-w-md text-center md:text-left mx-auto md:mx-0">
                 *Setiap rencana perjalanan sepenuhnya dapat disesuaikan dengan kebutuhan grup atau keluarga Anda.
             </p>
 </div>
 </section>
 <!-- Section 5: CTA / Footer -->
-<section class="relative flex items-center justify-center bg-primary" id="contact">
-<div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-20 px-10 items-center reveal">
+<section class="relative py-24 md:py-0 md:flex md:items-center md:justify-center bg-primary" id="contact">
+<div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 px-6 md:px-10 items-center mx-auto reveal">
 <div>
-<h2 class="text-6xl md:text-8xl font-black text-white leading-none mb-8">CERITA ANDA <br/> DIMULAI DI SINI</h2>
-<p class="text-white/90 text-xl font-light mb-12">
+<h2 class="text-5xl md:text-8xl font-black text-white leading-[0.9] mb-8">CERITA ANDA <br/> DIMULAI DI SINI</h2>
+<p class="text-white/90 text-lg md:text-xl font-light mb-12">
                     Siap untuk memulai petualangan besar Anda berikutnya? Mari rancang perjalanan yang menyentuh jiwa Anda.
                 </p>
 <div class="flex flex-col gap-6">
@@ -254,8 +293,7 @@
 <span class="text-xl font-bold">halo@nusantaratrip.com</span>
 </div>
 </div>
-</div>
-<div class="bg-background-dark p-12 rounded-2xl shadow-2xl">
+<div class="bg-background-dark p-8 md:p-12 rounded-2xl shadow-2xl">
 <h3 class="text-2xl font-bold mb-8">Minta Konsultasi</h3>
 <form class="space-y-6">
 <div>
@@ -281,11 +319,47 @@
                     </button>
 </form>
 </div>
-</div>
-<footer class="absolute bottom-6 w-full text-center text-white/30 text-[10px] font-bold uppercase tracking-widest">
+<footer class="mt-16 md:absolute md:bottom-6 w-full text-center text-white/30 text-[10px] font-bold uppercase tracking-[0.4em] px-6">
             © 2024 Agen Perjalanan Nusantara Trip. Seluruh hak cipta dilindungi undang-undang.
         </footer>
 </section>
+
+<script>
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-background-dark/80', 'py-4');
+            header.classList.remove('py-6');
+        } else {
+            header.classList.remove('bg-background-dark/80', 'py-4');
+            header.classList.add('py-6');
+        }
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle?.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    menuClose?.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+</script>
 
     <script src="assets/js/main.js"></script>
 </body></html>

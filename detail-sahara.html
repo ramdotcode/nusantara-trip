@@ -42,36 +42,36 @@
 </head>
 <body class="bg-background-dark text-white font-display">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
-        <a href="paket.html" class="bg-white/10 hover:bg-white/20 size-12 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 transition-all">
-            <span class="material-symbols-outlined">arrow_back</span>
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-10 py-4 md:py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
+        <a href="paket.html" class="bg-white/10 hover:bg-white/20 size-10 md:size-12 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 transition-all">
+            <span class="material-symbols-outlined text-xl md:text-2xl">arrow_back</span>
         </a>
-        <button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all shadow-xl shadow-primary/20">
+        <button class="bg-primary hover:bg-primary/90 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest px-6 md:px-8 py-2 md:py-3 rounded-full transition-all shadow-xl shadow-primary/20">
             Pesan Perjalanan
         </button>
     </header>
 
     <main>
         <!-- Hero Cover -->
-        <section class="h-[70vh] relative overflow-hidden">
+        <section class="h-[50vh] md:h-[70vh] relative overflow-hidden">
             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyNbsLRi4FiI4-VLXA75xeGYKnWfA5BwfDxTccrb6Bc9VXFBX1BVX6GEbmPwpuAvjqNl5doCLuwTUievMz89apcQTRdcAwqE6d4pwAmDQpufFNzxI_HKDnlh1wrvEvdqDOiVLc6VW0jDs6TPsbs7urM8ErU8k9l3_5Lgmhdp8RK3DxtvB_jBopWdrL1jnqw2gNSrO2AOoTBqRz4rE4ySTra4P3zHjCQu4haCEEPRzKJriztA5rKVLXRpMDaK1jO-3zppis9MIG" class="w-full h-full object-cover animate-fade-in">
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
         </section>
 
         <!-- Content Area -->
-        <section class="max-w-7xl mx-auto -mt-32 relative z-10 px-10 pb-24">
+        <section class="max-w-7xl mx-auto -mt-20 md:-mt-32 relative z-10 px-6 md:px-10 pb-24">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <!-- Left Side: Details -->
                 <div class="lg:col-span-2 space-y-12">
-                    <div class="bg-white/5 border border-white/10 p-12 rounded-[2.5rem] backdrop-blur-md animate-fade-up">
-                        <div class="flex items-center gap-4 mb-8">
-                            <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full">12 Hari Pengembaraan</span>
-                            <span class="text-sand/60 text-[10px] font-bold uppercase tracking-widest">Maroko</span>
+                    <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl md:rounded-[2.5rem] backdrop-blur-md animate-fade-up">
+                        <div class="flex items-center gap-4 mb-6 md:mb-8">
+                            <span class="bg-primary text-[8px] md:text-[10px] font-black uppercase tracking-widest px-3 md:px-4 py-1.5 md:py-2 rounded-full">12 Hari Pengembaraan</span>
+                            <span class="text-sand/60 text-[8px] md:text-[10px] font-bold uppercase tracking-widest">Maroko</span>
                         </div>
                         
-                        <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none mb-10">SAHARA GOLD:<br/>NOMAD ABADI</h1>
+                        <h1 class="text-4xl md:text-7xl font-black text-white tracking-tighter leading-tight mb-6 md:mb-10 uppercase">SAHARA GOLD:<br/>NOMAD ABADI</h1>
                         
-                        <p class="text-2xl font-light text-sand italic leading-relaxed mb-10">
+                        <p class="text-xl md:text-2xl font-light text-sand italic leading-relaxed mb-8 md:mb-10">
                             "Mengarungi lautan pasir keemasan di mana waktu seolah berhenti. Dalam perjalanan ini, Anda tidak hanya melihat gurun, Anda merasakannya melalui setiap helai angin dan setiap butir pasir."
                         </p>
                         
@@ -122,14 +122,14 @@
 
                 <!-- Right Side: Booking Form -->
                 <div class="relative reveal-right">
-                    <div class="sticky top-32 bg-white p-12 rounded-[2.5rem] shadow-2xl text-background-dark">
+                    <div class="bg-white p-8 md:p-12 rounded-3xl md:rounded-[2.5rem] shadow-2xl text-background-dark">
                         <p class="text-[10px] font-bold uppercase tracking-widest text-background-dark/40 mb-2">Mulai dari</p>
                         <div class="flex items-end gap-2 mb-8">
-                            <p class="text-5xl font-black text-background-dark">$4,200</p>
+                            <p class="text-4xl md:text-5xl font-black text-background-dark">$4,200</p>
                             <p class="text-sm font-medium text-background-dark/40 mb-2">/ orang</p>
                         </div>
                         
-                        <div class="space-y-6">
+                        <div class="space-y-4 md:space-y-6">
                             <div>
                                 <label class="text-[10px] font-bold uppercase tracking-widest text-background-dark/40 block mb-2">Nama Lengkap</label>
                                 <input type="text" placeholder="Budi Santoso" class="w-full bg-background-light border-transparent rounded-xl px-6 py-4 text-sm focus:ring-primary">
@@ -138,7 +138,7 @@
                                 <label class="text-[10px] font-bold uppercase tracking-widest text-background-dark/40 block mb-2">Alamat Email</label>
                                 <input type="email" placeholder="budi@contoh.com" class="w-full bg-background-light border-transparent rounded-xl px-6 py-4 text-sm focus:ring-primary">
                             </div>
-                            <button class="w-full bg-primary text-white py-5 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em] shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform">
+                            <button class="w-full bg-primary text-white py-4 md:py-5 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em] shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform">
                                 Ajukan Pertanyaan
                             </button>
                         </div>

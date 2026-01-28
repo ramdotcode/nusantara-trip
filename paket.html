@@ -37,35 +37,62 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
     </style>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-background-dark text-white font-display">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
-        <div class="flex items-center gap-3">
-            <div class="h-10 w-auto">
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-10 py-4 md:py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
+        <div class="flex items-center gap-2 md:gap-3">
+            <div class="h-8 md:h-10 w-auto">
                 <img src="assets/images/logo.png" alt="Nusantara Trip Logo" class="h-full w-auto object-contain">
             </div>
-            <h2 class="text-white text-xl font-bold tracking-[-0.015em] uppercase">Nusantara Trip</h2>
+            <h2 class="text-white text-lg md:text-xl font-bold tracking-[-0.015em] uppercase">Nusantara Trip</h2>
         </div>
-        <div class="flex items-center gap-12">
-            <nav class="hidden md:flex items-center gap-10">
+        <div class="flex items-center gap-4 md:gap-12">
+            <nav class="hidden lg:flex items-center gap-10">
                 <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="index.html">Beranda</a>
                 <a class="text-white text-xs font-bold uppercase tracking-widest transition-colors border-b-2 border-primary pb-1" href="paket.html">Destinasi</a>
                 <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="about.html">Tentang Kami</a>
             </nav>
-            <button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all">
+            <button class="hidden sm:block bg-primary hover:bg-primary/90 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest px-6 md:px-8 py-3 rounded-full transition-all">
                 Pesan Sekarang
+            </button>
+            <button id="menu-toggle" class="lg:hidden text-white">
+                <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
     </header>
 
-    <main class="pt-40 pb-24 px-10 md:px-20">
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-background-dark lg:hidden flex flex-col items-center justify-center gap-8">
+        <button id="menu-close" class="absolute top-6 right-6 text-white">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="text-white/80 hover:text-white text-2xl font-bold uppercase tracking-widest" href="index.html">Beranda</a>
+        <a class="text-white text-2xl font-bold uppercase tracking-widest" href="paket.html">Destinasi</a>
+        <a class="text-white/80 hover:text-white text-2xl font-bold uppercase tracking-widest" href="about.html">Tentang Kami</a>
+        <button class="mt-4 bg-primary text-white text-sm font-bold uppercase tracking-widest px-10 py-4 rounded-full">
+            Pesan Sekarang
+        </button>
+    </div>
+
+    <main class="pt-32 md:pt-40 pb-24 px-6 md:px-20">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-20">
+            <div class="mb-12 md:mb-20">
                 <span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block animate-fade-up">Katalog Kami</span>
-                <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none animate-fade-up delay-1">JELAJAHI SEMUA<br/>DESTINASI</h1>
+                <h1 class="text-4xl md:text-8xl font-black text-white tracking-tighter leading-tight animate-fade-up delay-1 uppercase">JELAJAHI SEMUA<br/>DESTINASI</h1>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
