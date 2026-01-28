@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nusantara Trip - Destinasi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                        "sand": "#d9c5b2",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-background-dark text-white font-display">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
+        <div class="flex items-center gap-3">
+            <div class="size-6 text-primary">
+                <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <h2 class="text-white text-xl font-bold tracking-[-0.015em] uppercase">Nusantara Trip</h2>
+        </div>
+        <div class="flex items-center gap-12">
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="index.html">Beranda</a>
+                <a class="text-white text-xs font-bold uppercase tracking-widest transition-colors border-b-2 border-primary pb-1" href="paket.html">Destinasi</a>
+                <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="about.html">Tentang Kami</a>
+            </nav>
+            <button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all">
+                Pesan Sekarang
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-40 pb-24 px-10 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block animate-fade-up">Katalog Kami</span>
+                <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none animate-fade-up delay-1">JELAJAHI SEMUA<br/>DESTINASI</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Package Card 1 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1549643276-fdf2fab574f5?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">1 Hari</span>
+                        <h3 class="text-3xl font-bold mb-2">Bandung One Day Escape</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Pelarian singkat namun berkesan mengeksplorasi ikon-ikon terbaik kota Bandung.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Rp 350rb <span class="text-xs font-normal text-white/50">/ pax</span></span>
+                            <a href="detail-bandung-escape.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 2 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1580890310980-27d53ec0db23?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">1 Hari</span>
+                        <h3 class="text-3xl font-bold mb-2">Lembang Highlight Tour</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Menikmati udara sejuk dan pemandangan alam terbaik di dataran tinggi Lembang.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Rp 450rb <span class="text-xs font-normal text-white/50">/ pax</span></span>
+                            <a href="detail-lembang-tour.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 3 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1571401835393-8c5f35328320?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">3 Hari 2 Malam</span>
+                        <h3 class="text-3xl font-bold mb-2">Bandung – Pangandaran 3D2N</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Kombinasi perjalanan kota dan pantai yang menakjubkan di Jawa Barat.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Rp 1.8jt <span class="text-xs font-normal text-white/50">/ pax</span></span>
+                            <a href="detail-bandung-pangandaran.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 4 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">2 Hari 1 Malam</span>
+                        <h3 class="text-3xl font-bold mb-2">Jogja Heritage Tour 2D1N</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Menelusuri jejak sejarah dan kekayaan budaya di kota istimewa Yogyakarta.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Rp 950rb <span class="text-xs font-normal text-white/50">/ pax</span></span>
+                            <a href="detail-jogja-heritage.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 5 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Custom</span>
+                        <h3 class="text-3xl font-bold mb-2">Bandung Family Fun Trip</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Liburan keluarga yang ceria dengan berbagai aktivitas ramah anak dan edukatif.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Hubungi Kami <span class="text-xs font-normal text-white/50"></span></span>
+                            <a href="detail-bandung-family.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 6 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Corporate</span>
+                        <h3 class="text-3xl font-bold mb-2">Corporate Gathering Lembang</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Perkuat solidaritas tim perusahaan Anda dengan program gathering di alam Lembang.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Request <span class="text-xs font-normal text-white/50">Plan</span></span>
+                            <a href="detail-corporate-lembang.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 7 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Full Day</span>
+                        <h3 class="text-3xl font-bold mb-2">Team Building Ciwidey</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Aktivitas seru di Ciwidey untuk membangun chemistry dan kerja sama tim yang solid.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Hubungi Kami <span class="text-xs font-normal text-white/50"></span></span>
+                            <a href="detail-teambuilding-ciwidey.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 8 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Romantic</span>
+                        <h3 class="text-3xl font-bold mb-2">Bali Honeymoon Package</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Momen romantis tak terlupakan di pulau dewata untuk pasangan baru.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Rp 12.5jt <span class="text-xs font-normal text-white/50">/ couple</span></span>
+                            <a href="detail-bali-honeymoon.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 9 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1596402184320-417d717867cd?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Open Trip</span>
+                        <h3 class="text-3xl font-bold mb-2">Open Trip Kawah Putih</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Gabung dengan penjelajah lain mengunjungi kawah vulkanik yang indah di Ciwidey.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Rp 250rb <span class="text-xs font-normal text-white/50">/ pax</span></span>
+                            <a href="detail-opentrip-kawahputih.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Card 10 -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden snap-center reveal">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(34,21,16,0.9) 0%, transparent 60%), url("https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&q=80");'></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Open Trip</span>
+                        <h3 class="text-3xl font-bold mb-2">Open Trip Dieng Sunrise</h3>
+                        <p class="text-sand/80 text-sm mb-6 line-clamp-2">Mengejar matahari terbit legendaris di negeri di atas awan, Dieng.</p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-6">
+                            <span class="text-xl font-bold">Rp 450rb <span class="text-xs font-normal text-white/50">/ pax</span></span>
+                            <a href="detail-opentrip-dieng.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-20 px-10 border-t border-white/5 text-center">
+        <h2 class="text-2xl font-bold tracking-tighter uppercase mb-2">Nusantara Trip</h2>
+        <p class="text-white/20 text-[10px] uppercase tracking-[0.4em]">© 2024 Kolektif Perjalanan Nusantara Trip. Seluruh hak cipta dilindungi undang-undang.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

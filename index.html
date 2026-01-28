@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nusantara Trip - Perjalanan Naratif Sinematik</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                        "sand": "#d9c5b2",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+        section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<!-- Header / Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold tracking-[-0.015em] uppercase">Nusantara Trip</h2>
+</div>
+<div class="flex items-center gap-12">
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-white text-xs font-bold uppercase tracking-widest transition-colors border-b-2 border-primary pb-1" href="index.html">Beranda</a>
+<a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="paket.html">Destinasi</a>
+<a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="about.html">Tentang Kami</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all">
+                Pesan Sekarang
+            </button>
+</div>
+</header>
+<!-- Section 1: Hero -->
+<section class="relative flex items-center justify-center" id="hero">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Stunning mountain landscape at sunrise" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMq58wvXK_hUko8vuxmCSPOxFyVpLV-m_57eimbwIy27Ney21aniJ0_ZdPk_7Tfp4n6IJNUCOu9LwGx0x7pooUkRZcwZ0menBXf52-T6U5ha6R1KN22rsmPf9oxcl8H_etVFr-T339slMuH37UGxRyWeUpA6ewbghEh0iT3D9-t0huqDNLv1MO9-MIgq-SBR_bQ9UxdXXY25gIyUCV7-u-Vmf4fK4Cw9ewXyBUM9rLHOG2HGB_IrkTLDA9IvdK-q4c6asHjJ74");'></div>
+<div class="relative z-10 text-center max-w-4xl px-6">
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tighter mb-8 opacity-90 uppercase animate-fade-up">
+                Jelajahi Indonesia Tanpa Ribet 
+            </h1>
+<p class="text-sand text-lg md:text-xl font-light leading-relaxed mb-10 max-w-3xl mx-auto animate-fade-up delay-1">
+                Dari trip keluarga hingga corporate outing, kami siapkan perjalanan yang nyaman dan terorganisir.
+            </p>
+<div class="flex flex-col items-center gap-4 animate-fade-up delay-2">
+<a href="paket.html" class="bg-primary text-white text-sm font-bold uppercase tracking-[0.2em] px-10 py-4 rounded-full transition-transform hover:scale-105">
+                    Jelajahi Perjalanan
+                </a>
+<div class="mt-12 animate-bounce">
+<span class="material-symbols-outlined text-white/50 text-4xl">keyboard_double_arrow_down</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Narrative / Story -->
+<section class="relative flex items-center justify-center bg-background-light dark:bg-background-dark" id="philosophy">
+<div class="max-w-4xl px-10 text-center">
+<span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-6 block">Filosofi Kami</span>
+<h2 class="text-white text-4xl md:text-6xl font-bold leading-tight mb-8 reveal">Seni Menjelajah</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-10 reveal delay-1"></div>
+<p class="text-white/70 text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto italic reveal delay-2">
+                "Kami percaya perjalanan adalah sebuah narasi, rangkaian momen yang terjalin membentuk cerita seumur hidup. Misi kami adalah memandu Anda melewati bab-bab yang belum tertulis."
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 reveal delay-3">
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+<h3 class="font-bold text-lg uppercase tracking-wider">Terkurasi</h3>
+<p class="text-white/50 text-sm">Setiap detail direncanakan dengan teliti.</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">public</span>
+<h3 class="font-bold text-lg uppercase tracking-wider">Autentik</h3>
+<p class="text-white/50 text-sm">Koneksi nyata dengan budaya lokal.</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">verified_user</span>
+<h3 class="font-bold text-lg uppercase tracking-wider">Eksklusif</h3>
+<p class="text-white/50 text-sm">Akses ke permata tersembunyi dan lokasi pribadi.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Packages (Horizontal Slider) -->
+<section class="flex flex-col justify-center bg-zinc-900 reveal" id="destinations">
+<div class="px-20 mb-10 flex justify-between items-end reveal">
+<div>
+<span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block">Destinasi Pilihan</span>
+<h2 class="text-white text-5xl font-bold">Liburan Terkurasi</h2>
+</div>
+<div class="flex gap-4">
+<a href="paket.html" class="flex items-center gap-2 text-primary font-bold uppercase text-[10px] tracking-widest hover:underline">
+    Lihat Semua Paket <span class="material-symbols-outlined text-sm">east</span>
+</a>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto px-20 pb-10 no-scrollbar snap-x reveal delay-1">
+<!-- Card 1 -->
+<div class="min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%), url("https://images.unsplash.com/photo-1549643276-fdf2fab574f5?auto=format&fit=crop&q=80");'></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">1 Hari</span>
+<h3 class="text-3xl font-bold mb-2">Bandung One Day Escape</h3>
+<p class="text-sand/80 text-sm mb-6">Pelarian singkat namun berkesan mengeksplorasi ikon-ikon terbaik kota Bandung.</p>
+<div class="flex items-center justify-between border-t border-white/20 pt-6">
+<span class="text-xl font-bold">Rp 350rb <span class="text-xs font-normal text-white/50">/ pax</span></span>
+<a href="detail-bandung-escape.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%), url("https://images.unsplash.com/photo-1580890310980-27d53ec0db23?auto=format&fit=crop&q=80");'></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">1 Hari</span>
+<h3 class="text-3xl font-bold mb-2">Lembang Highlight Tour</h3>
+<p class="text-sand/80 text-sm mb-6">Menikmati udara sejuk dan pemandangan alam terbaik di dataran tinggi Lembang.</p>
+<div class="flex items-center justify-between border-t border-white/20 pt-6">
+<span class="text-xl font-bold">Rp 450rb <span class="text-xs font-normal text-white/50">/ pax</span></span>
+<a href="detail-lembang-tour.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[450px] aspect-[3/4] relative rounded-xl overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%), url("https://images.unsplash.com/photo-1571401835393-8c5f35328320?auto=format&fit=crop&q=80");'></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<span class="bg-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">3H 2M</span>
+<h3 class="text-3xl font-bold mb-2">Bandung – Pangandaran 3D2N</h3>
+<p class="text-sand/80 text-sm mb-6">Kombinasi perjalanan kota dan pantai yang menakjubkan di Jawa Barat.</p>
+<div class="flex items-center justify-between border-t border-white/20 pt-6">
+<span class="text-xl font-bold">Rp 1.8jt <span class="text-xs font-normal text-white/50">/ pax</span></span>
+<a href="detail-bandung-pangandaran.html" class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Interactive Itinerary (Map) -->
+<section class="relative flex flex-col justify-center bg-background-dark overflow-hidden" id="itinerary">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style='background-image: url("https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?auto=format&fit=crop&q=80"); background-size: cover;'></div>
+<div class="relative z-10 px-20 reveal">
+<span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block">Contoh Perjalanan</span>
+<h2 class="text-white text-5xl font-bold mb-16">Alur Pengalaman</h2>
+<div class="relative w-full h-64 flex items-center">
+<!-- SVG Route Path -->
+<svg class="absolute w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 1000 200">
+<path d="M0,100 C150,100 250,50 400,100 C550,150 750,50 1000,100" stroke="#ee5b2b" stroke-dasharray="8 8" stroke-width="2"></path>
+</svg>
+<div class="relative w-full flex justify-between items-center">
+<!-- Stop 1 -->
+<div class="group relative flex flex-col items-center">
+<div class="size-6 bg-primary rounded-full ring-8 ring-primary/20 cursor-pointer transition-transform group-hover:scale-150"></div>
+<div class="absolute -top-24 w-40 p-4 bg-zinc-800 rounded-lg opacity-0 group-hover:opacity-100 transition-all text-center">
+<span class="text-primary text-[10px] font-bold block mb-1">Hari 1</span>
+<span class="text-white font-bold text-xs uppercase">Penjemputan</span>
+</div>
+<span class="mt-4 text-white/60 text-xs font-bold uppercase">Mulai</span>
+</div>
+<!-- Stop 2 -->
+<div class="group relative flex flex-col items-center">
+<div class="size-6 bg-primary rounded-full ring-8 ring-primary/20 cursor-pointer transition-transform group-hover:scale-150"></div>
+<div class="absolute top-12 w-40 p-4 bg-zinc-800 rounded-lg opacity-0 group-hover:opacity-100 transition-all text-center">
+<span class="text-primary text-[10px] font-bold block mb-1">Hari 1-2</span>
+<span class="text-white font-bold text-xs uppercase">Explorasi Alam</span>
+</div>
+<span class="mt-4 text-white/60 text-xs font-bold uppercase">Aktivitas</span>
+</div>
+<!-- Stop 3 -->
+<div class="group relative flex flex-col items-center">
+<div class="size-6 bg-primary rounded-full ring-8 ring-primary/20 cursor-pointer transition-transform group-hover:scale-150"></div>
+<div class="absolute -top-24 w-40 p-4 bg-zinc-800 rounded-lg opacity-0 group-hover:opacity-100 transition-all text-center">
+<span class="text-primary text-[10px] font-bold block mb-1">Malam Terakhir</span>
+<span class="text-white font-bold text-xs uppercase">Gala Dinner</span>
+</div>
+<span class="mt-4 text-white/60 text-xs font-bold uppercase">Perayaan</span>
+</div>
+<!-- Stop 4 -->
+<div class="group relative flex flex-col items-center">
+<div class="size-6 bg-primary rounded-full ring-8 ring-primary/20 cursor-pointer transition-transform group-hover:scale-150"></div>
+<div class="absolute top-12 w-40 p-4 bg-zinc-800 rounded-lg opacity-0 group-hover:opacity-100 transition-all text-center">
+<span class="text-primary text-[10px] font-bold block mb-1">Selesai</span>
+<span class="text-white font-bold text-xs uppercase">Kepulangan</span>
+</div>
+<span class="mt-4 text-white/60 text-xs font-bold uppercase">Selesai</span>
+</div>
+</div>
+</div>
+<p class="mt-20 text-white/40 text-sm max-w-md">
+                *Setiap rencana perjalanan sepenuhnya dapat disesuaikan dengan kebutuhan grup atau keluarga Anda.
+            </p>
+</div>
+</section>
+<!-- Section 5: CTA / Footer -->
+<section class="relative flex items-center justify-center bg-primary" id="contact">
+<div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-20 px-10 items-center reveal">
+<div>
+<h2 class="text-6xl md:text-8xl font-black text-white leading-none mb-8">CERITA ANDA <br/> DIMULAI DI SINI</h2>
+<p class="text-white/90 text-xl font-light mb-12">
+                    Siap untuk memulai petualangan besar Anda berikutnya? Mari rancang perjalanan yang menyentuh jiwa Anda.
+                </p>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="size-12 rounded-full border border-white/40 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="text-xl font-bold">+62 812-3456-7890</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="size-12 rounded-full border border-white/40 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="text-xl font-bold">halo@nusantaratrip.com</span>
+</div>
+</div>
+</div>
+<div class="bg-background-dark p-12 rounded-2xl shadow-2xl">
+<h3 class="text-2xl font-bold mb-8">Minta Konsultasi</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">Nama Lengkap</label>
+<input class="w-full bg-white/5 border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Budi Santoso" type="text"/>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">Alamat Email</label>
+<input class="w-full bg-white/5 border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="budi@contoh.com" type="email"/>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">Destinasi yang Diminati</label>
+<select class="w-full bg-white/5 border-white/10 rounded-lg px-4 py-3 text-white/70 focus:border-primary focus:ring-1 focus:ring-primary transition-all appearance-none">
+<option>Bandung One Day Escape</option>
+<option>Lembang Highlight Tour</option>
+<option>Bandung – Pangandaran 3D2N</option>
+<option>Jogja Heritage Tour 2D1N</option>
+<option>Lainnya</option>
+</select>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg uppercase tracking-widest mt-4 transition-all">
+                        Kirim Pertanyaan
+                    </button>
+</form>
+</div>
+</div>
+<footer class="absolute bottom-6 w-full text-center text-white/30 text-[10px] font-bold uppercase tracking-widest">
+            © 2024 Agen Perjalanan Nusantara Trip. Seluruh hak cipta dilindungi undang-undang.
+        </footer>
+</section>
+
+    <script src="assets/js/main.js"></script>
+</body></html>

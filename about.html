@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nusantara Trip - Cerita Kami</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                        "sand": "#d9c5b2",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-background-dark text-white font-display">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-transparent transition-all duration-300 backdrop-blur-sm">
+        <div class="flex items-center gap-3">
+            <div class="size-6 text-primary">
+                <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <h2 class="text-white text-xl font-bold tracking-[-0.015em] uppercase">Nusantara Trip</h2>
+        </div>
+        <div class="flex items-center gap-12">
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="index.html">Beranda</a>
+                <a class="text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="paket.html">Destinasi</a>
+                <a class="text-white text-xs font-bold uppercase tracking-widest transition-colors border-b-2 border-primary pb-1" href="about.html">Tentang Kami</a>
+            </nav>
+            <button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all">
+                Pesan Sekarang
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-40">
+        <!-- Hero Section -->
+        <section class="px-10 md:px-20 mb-32 flex flex-col items-center text-center">
+            <span class="text-primary text-sm font-bold uppercase tracking-[0.5em] mb-8 block animate-fade-up">Narasi Kami</span>
+            <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-12 animate-fade-up delay-1">SENI MENJELAJAH<br/>YANG TERKURASI</h1>
+            <p class="text-2xl md:text-3xl font-light text-sand italic max-w-4xl leading-relaxed animate-fade-up delay-2">
+                "Kami percaya perjalanan adalah sebuah narasi, rangkaian momen yang terjalin membentuk cerita seumur hidup. Misi kami adalah memandu Anda melewati bab-bab yang belum tertulis."
+            </p>
+        </section>
+
+        <!-- Image Gallery Grid -->
+        <section class="px-10 md:px-20 mb-40 max-w-7xl mx-auto reveal">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="rounded-3xl overflow-hidden aspect-[4/5] md:aspect-auto md:h-[600px] reveal-left">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="grid grid-rows-2 gap-8 h-[600px] reveal-right">
+                    <div class="rounded-3xl overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <div class="rounded-3xl overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="max-w-7xl mx-auto px-10 md:px-20 mb-40 relative z-10 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                <div class="pt-4 reveal-left">
+                    <span class="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">Nilai-Nilai Kami</span>
+                    <h2 class="text-5xl md:text-6xl font-black mb-10 tracking-tighter leading-none">FILOSOFI<br/>KAMI</h2>
+                    <div class="space-y-8">
+                        <p class="text-white/70 text-xl leading-relaxed font-light italic">
+                            Nusantara Trip lahir dari keinginan untuk mendefinisikan kembali perjalanan mewah. Bagi kami, kemewahan bukan hanya tentang hotel bintang lima—ini tentang akses eksklusif ke budaya lokal, cerita yang belum pernah terdengar, dan momen autentik yang tak ternilai harganya.
+                        </p>
+                        <p class="text-white/50 text-lg leading-relaxed font-light">
+                            Setiap destinasi dalam katalog kami dipilih melalui proses kurasi yang ketat untuk memastikan standar kualitas tertinggi dan keunikan pengalaman.
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-10 bg-white/5 p-12 md:p-16 rounded-[3rem] backdrop-blur-xl border border-white/10 shadow-2xl relative reveal-right">
+                    <div class="absolute -top-6 -left-6 size-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-white">star_rate</span>
+                    </div>
+                    <div class="flex gap-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">verified</span>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 uppercase tracking-wide">Terpercaya</h3>
+                            <p class="text-white/40 text-sm leading-relaxed">Lebih dari 10 tahun pengalaman melayani ribuan penjelajah dunia dengan perhatian mendalam pada setiap detail.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">concierge</span>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 uppercase tracking-wide">Personal</h3>
+                            <p class="text-white/40 text-sm leading-relaxed">Layanan concierge 24/7 siap menangani semua kebutuhan perjalanan Anda, memastikan perjalanan yang lancar.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">public</span>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 uppercase tracking-wide">Bertanggung Jawab</h3>
+                            <p class="text-white/40 text-sm leading-relaxed">Berkomitmen pada pariwisata berkelanjutan yang menghormati komunitas lokal dan melestarikan keajaiban alam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section (Optional for more impact) -->
+        <section class="bg-primary py-24 mb-32 px-10">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                <div>
+                    <p class="text-5xl md:text-7xl font-black mb-2">120+</p>
+                    <p class="text-[10px] uppercase tracking-[0.4em] font-bold opacity-70">Destinasi</p>
+                </div>
+                <div>
+                    <p class="text-5xl md:text-7xl font-black mb-2">15k</p>
+                    <p class="text-[10px] uppercase tracking-[0.4em] font-bold opacity-70">Wisatawan Bahagia</p>
+                </div>
+                <div>
+                    <p class="text-5xl md:text-7xl font-black mb-2">98%</p>
+                    <p class="text-[10px] uppercase tracking-[0.4em] font-bold opacity-70">Kepuasan</p>
+                </div>
+                <div>
+                    <p class="text-5xl md:text-7xl font-black mb-2">50+</p>
+                    <p class="text-[10px] uppercase tracking-[0.4em] font-bold opacity-70">Penghargaan</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 px-10 text-center border-t border-white/5">
+        <h2 class="text-2xl font-bold tracking-tighter uppercase mb-4">Nusantara Trip</h2>
+        <p class="text-white/20 text-[10px] uppercase tracking-[0.4em]">© 2024 Kolektif Perjalanan Nusantara Trip. Seluruh hak cipta dilindungi undang-undang.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
